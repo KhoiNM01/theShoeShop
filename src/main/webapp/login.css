@@ -1,0 +1,168 @@
+/* Tùy chỉnh thanh tabar */
+.navbar {
+    background-color: rgba(10, 67, 127, 1) !important;
+    padding: 15px 0; /* Khoảng cách dưới và trên */
+    box-shadow: none; /* Loại bỏ đổ bóng */
+}
+
+/* Thêm màu nền thanh tabar khi hover */
+.navbar a:hover {
+    background-color: #191970; /* Màu và độ dày của nền */
+    text-decoration: none;
+    
+}
+
+.logoimg{
+    width: 130PX;
+    height: 50PX;
+    margin: 0 0 0 0;
+    margin-top: 10PX;
+}
+
+/* Định dạng cho thanh tìm kiếm */
+.search-container {
+    display: flex;
+    align-items: center;
+}
+
+.search-container input {
+    padding: 10px;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+}
+
+.search-container button {
+    padding: 10px 20px;
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 10px; /* Khoảng cách giữa ô tìm kiếm và nút tìm kiếm */
+}
+
+.search-container button:hover {
+    background-color: #2980b9;
+}
+
+.form-controls {
+    
+    border: none; /* Loại bỏ đường viền */
+    
+    background-color: rgb(244, 243, 243); 
+    color: #000; /* Màu chữ (màu đen trong ví dụ này) */
+    font-size: 16px; /* Kích thước chữ */
+    width: 540px; /* Kích thước ô tìm kiếm */
+    margin-right: 80px; /* Khoảng cách từ ô tìm kiếm đến cạnh phải của navbar */
+   
+}
+
+.search-icon {
+    position: absolute;
+    right: 650px; /* Điều chỉnh khoảng cách từ biểu tượng đến phía bên phải */
+    top: 50%;
+    transform: translateY(-50%);
+    color: rgba(0, 0, 0, 0.5); /* Màu mờ */
+    cursor: pointer;
+    transition: color 0.3s ease; /* Hiệu ứng mờ */
+}
+
+.search-icon:hover {
+    color: rgba(0, 0, 0, 0.8); /* Màu khi hover */
+}
+
+/* Định dạng cho dropdown button */
+.dropdown-toggle {
+    background-color: transparent;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    font-weight: bold; /* In đậm chữ */
+    margin-left: 30px;
+    
+}
+
+/* Định dạng khi hover và focus vào dropdown button */
+.dropdown-toggle:hover, .dropdown-toggle:focus {
+    background-color: transparent;
+    border: none;
+    color: #e5e5e5;
+}
+
+/* Định dạng cho dropdown menu */
+.dropdown-menu {
+    background-color: rgb(9, 85, 165);
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+    width: 150px; /* Điều chỉnh độ rộng của dropdown menu */
+    margin-left: 20px;
+}
+
+/* Định dạng cho các tùy chọn trong dropdown menu */
+.dropdown-item {
+    color: #fff;
+    padding: 10px 15px;
+    text-align: center;
+    transition: background-color 0.3s;
+}
+
+/* Định dạng khi hover vào các tùy chọn trong dropdown menu */
+.dropdown-item:hover {
+    background-color: #191970;
+    color: #fff;
+    text-decoration: none;
+}
+
+/*login*/
+.loginn {
+    margin-left: 50px;
+     margin-top: 250px;
+
+ }
+
+ .lgin{
+    border-color: rgba(10, 67, 127, 1);
+    background-color: rgba(10, 67, 127, 1);  
+    
+}
+
+.lgin:hover{
+    border-color: rgb(6, 38, 72);
+    background-color: rgb(5, 35, 66);    
+   
+}
+#forgotlink{
+    color: red;
+    text-decoration: underline;
+    margin-bottom: 2px;
+}
+#forgotlink:hover{
+    color: rgb(96, 6, 6);
+}
+
+/* CSS */
+.custom-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.custom-row .btn {
+    width: 120px; /* Đặt chiều rộng tùy chỉnh cho nút "Log in" */
+    margin-right: 10px; /* Khoảng cách giữa nút "Log in" và "Forgot Password?" */
+}
+
+.custom-row .fg {
+    margin-top: 8px; /* Điều chỉnh khoảng cách từ phía trên của "Forgot Password?" */
+}
+
+.bglogin {
+    margin-top: 200px; 
+}
+
+#homelink {
+    color: white;
+    text-decoration: none;
+}
+

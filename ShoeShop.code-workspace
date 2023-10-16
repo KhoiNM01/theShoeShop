@@ -1,0 +1,16 @@
+{
+	"folders": [
+		{
+			"path": "../ShoeShop"
+		},
+		{
+			"path": "."
+		},
+		{
+			"path": "../lab2/lab3"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "ShoeShop"
+	}
+}

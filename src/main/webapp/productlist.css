@@ -1,0 +1,295 @@
+/* Tùy chỉnh thanh tabar */
+.navbar {
+    background-color: rgba(10, 67, 127, 1) !important;
+    padding: 15px 0; /* Khoảng cách dưới và trên */
+    box-shadow: none; /* Loại bỏ đổ bóng */
+}
+
+/* Thêm màu nền thanh tabar khi hover */
+.navbar a:hover {
+    background-color: #191970; /* Màu và độ dày của nền */
+    text-decoration: none;
+    
+    
+}
+
+.logoimg{
+    width: 130PX;
+    height: 50PX;
+    margin: 0 0 0 0;
+    margin-top: 10PX;
+}
+
+Định dạng cho dropdown
+.product-button .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    border-radius: 5px;
+}
+
+/* Đổi màu chữ product */
+.navbar a {
+    color: #fff; /* Màu đen (hoặc mã màu khác nếu bạn muốn) */
+    margin-right: 20px; /* Khoảng cách giữa các tab */
+}
+
+/* Định dạng cho thanh tìm kiếm */
+.search-container {
+    display: flex;
+    align-items: center;
+}
+
+.search-container input {
+    padding: 10px;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+}
+
+.search-container button {
+    padding: 10px 20px;
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 10px; /* Khoảng cách giữa ô tìm kiếm và nút tìm kiếm */
+}
+
+.search-container button:hover {
+    background-color: #2980b9;
+}
+
+.form-controls {
+    
+    border: none; /* Loại bỏ đường viền */
+    
+    background-color: rgb(244, 243, 243); 
+    color: #000; /* Màu chữ (màu đen trong ví dụ này) */
+    font-size: 16px; /* Kích thước chữ */
+    width: 540px; /* Kích thước ô tìm kiếm */
+    margin-right: 80px; /* Khoảng cách từ ô tìm kiếm đến cạnh phải của navbar */
+   
+}
+
+.search-icon {
+    position: absolute;
+    right: 460px; /* Điều chỉnh khoảng cách từ biểu tượng đến phía bên phải */
+    top: 50%;
+    transform: translateY(-50%);
+    color: rgba(0, 0, 0, 0.5); /* Màu mờ */
+    cursor: pointer;
+    transition: color 0.3s ease; /* Hiệu ứng mờ */
+}
+
+.search-icon:hover {
+    color: rgba(0, 0, 0, 0.8); /* Màu khi hover */
+}
+
+/* Định dạng cho dropdown button */
+.dropdown-toggle {
+    background-color: transparent;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    font-weight: bold; /* In đậm chữ */
+    margin-left: 30px;
+    
+}
+
+/* Định dạng khi hover và focus vào dropdown button */
+.dropdown-toggle:hover, .dropdown-toggle:focus {
+    background-color: transparent;
+    border: none;
+    color: #e5e5e5;
+}
+
+/* Định dạng cho dropdown menu */
+.dropdown-menu {
+    background-color: rgb(9, 85, 165);
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+    width: 150px; /* Điều chỉnh độ rộng của dropdown menu */
+    margin-left: 20px;
+}
+
+/* Định dạng cho các tùy chọn trong dropdown menu */
+.dropdown-item {
+    color: #fff;
+    padding: 10px 15px;
+    text-align: center;
+    transition: background-color 0.3s;
+}
+
+/* Định dạng khi hover vào các tùy chọn trong dropdown menu */
+.dropdown-item:hover {
+    background-color: #191970;
+    color: #fff;
+    text-decoration: none;
+}
+
+section {
+    margin-top: 150px;
+    padding: 2rem 9%;
+}
+.products .heading {
+    text-align: left;
+    color: #333;
+    font-size: 2rem;
+    padding: 1rem;
+    margin: 2rem 0;
+    background: rgba(0, 46, 144, 0.082);
+}
+
+.products .heading span {
+    color: var(--pink);
+}
+
+.products .box-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+   
+}
+
+.products .box-container .box {
+    position: relative;
+    flex: 1 1 10rem;
+    border: 0.1rem solid rgba(0, 0, 0, .1);
+    box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.1);
+    height: 300px;
+    
+    
+}
+
+/* .products .box-container .box .discount {
+    position: absolute;
+    font-size: 2rem;
+    top: 1rem;
+    left: 1rem;
+    padding: 0.7rem 1rem;
+    color: var(--pink);
+    background: rgba(255, 51, 153, .05);
+    border-radius: 0.5rem;
+    z-index: 1;
+} */
+
+.products .box-container .box .image {
+    position: relative;
+    text-align: center;
+    padding-top: 2rem;
+}
+
+.products .box-container .box .image img {
+    height: 10rem;
+    width: 10rem;
+}
+
+
+.products .box-container .box:hover .image img {
+    transform: scale(1.1);
+}
+
+
+
+.content {
+    padding: 2rem;
+    text-align: center;
+    word-wrap: break-word;
+}
+
+
+
+#pricebefore{
+    text-decoration: line-through;
+    color: #999;
+    
+}
+.price{
+    color: red;
+}
+.discount{
+    position: relative ;
+    bottom: 20px;
+    left: 5px;
+    background-color:rgba(197, 10, 10, 0.775);
+    display: block;
+    width: 55px;
+    border: none;
+    border-radius: 6px;
+    color: #fff;
+   
+}
+
+.icons1{
+    position: relative ;
+    bottom: 20px;
+    left: 200px;
+    background-color:whitesmoke;
+    display: block;
+    width: 55px;
+    border: none;
+    border-radius: 6px;
+    
+  
+   
+}
+
+.icons1 a{
+    color: #000;
+   
+}
+
+.icons1 a:hover{
+    opacity: 0.5;
+    text-decoration: none;
+}
+
+.star {
+    font-size: 25px;
+    cursor: pointer;
+    color: #ccc;
+    transition: color 0.2s;
+}
+
+/* Màu sao khi được chọn */
+.star.active {
+    color: #ffcc00;
+}
+
+/* CSS cho sản phẩm */
+.box-content {
+    border: 1px solid #ddd;
+    padding: 10px;
+    transition: background-color 0.2s;
+    cursor: pointer;
+}
+
+.box-content:hover {
+    background-color: #f5f5f5;
+}
+
+/* footer */
+.footer{
+    position: relative;
+    bottom: 0;
+    background:#090909eb ;
+    color: white;
+    padding: 10px;
+    padding-left: 200px;
+    padding-right: 200px;
+    margin-top: 50px;
+   
+}
+.address img{
+    width: 20px;
+    height: 20px;
+}
+.text-center img{
+    width: 50px;
+    height: 50px;
+}

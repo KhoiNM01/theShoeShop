@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Sử dụng Bootstrap qua CDN và CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Sử dụng jQuery đầy đủ -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>   
+    <link rel="stylesheet" href="signup.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+
+
+   
+</head>
+<body>
+   <!-- Thanh Navbar -->
+<nav class="navbar navbar-expand-lg bg-dark fixed-top">
+    <div class="container">
+        <!-- Logo hoặc tên trang -->
+        <a class="navbar-brand" href="home.html"><img class="logoimg" src="img/theshoeshopabuja.png" alt=""></a>
+
+        <!-- Nút để mở menu trên điện thoại -->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="dropdown">
+            <button class="btn btn-secondary dropdown-toggle" type="button" id="loginSignupDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Product
+            </button>
+            <div class="dropdown-menu" aria-labelledby="loginSignupDropdown">
+                            <a class="dropdown-item" href="#section1">Adidas</a>
+                            <a class="dropdown-item" href="#section2">Nike</a>
+                            <a class="dropdown-item" href="#section3">Bitis</a>
+                            <a class="dropdown-item" href="#section4">Converse</a>
+                            <a class="dropdown-item" href="#section5">MLB</a>
+                            <a class="dropdown-item" href="#section6">New Balance</a>
+                            <a class="dropdown-item" href="#section7">Vans</a>
+                            <a class="dropdown-item" href="#section8">Ananas</a>                                           
+                        </div>
+            
+        </div>
+
+        <!-- Các liên kết ra giữa -->
+
+        <!-- Thanh tìm kiếm -->
+        <form class="form-inline my-2 my-lg-0 ml-auto">
+            <div class="search-container">
+                <input class="form-controls" type="search" id="searchInput" placeholder="What are you looking for?" aria-label="Search">
+                <i class="fas fa-search fa-lg search-icon"></i>
+            </div>
+        </form>
+
+         <!-- Dropdown cho "Login/Sign up" -->
+         <div class="dropdown">
+            <button class="btn btn-secondary dropdown-toggle" type="button" id="loginSignupDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Log in/Sign up
+            </button>
+            <div class="dropdown-menu" aria-labelledby="loginSignupDropdown">
+                <a class="dropdown-item" href="login.html">Log in</a>
+                <a class="dropdown-item" href="signup.html">Sign up</a>
+            </div>
+        </div>
+          
+    </div>
+</nav>         
+    
+<!-- Đường ngăn cách giữa thanh tabar và nội dung -->
+<hr class="divider-line">
+
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-md-8 img12">
+                <div class="h-100 d-flex align-items-center justify-content-center">
+                    <img src="img/OIP.jpg" alt="IMG" class="img-fluid">
+                </div>
+             </div>
+                       
+             <div class="col-md-4">
+                <div class="signupp"> 
+                <h2 class="mb-4">Create an account</h2>
+                <p class="mb-3">Enter your details below</p>
+                <form id="registrationForm">
+                    <div class="form-group mb-3">
+                        <input type="text" class="custom-input form-control" id="username" placeholder="Name">
+                    </div>
+                    <div class="form-group mb-3">
+                        <input type="text" class="custom-input form-control" id="contactInfo" placeholder="Email or phone">
+
+                    </div>
+                    <div class="form-group mb-3">
+                        <input type="password" class="custom-input form-control" id="password" placeholder="Password">
+                    </div>
+                    <div class="form-group mb-3">
+                        <input type="password" class="custom-input form-control" id="confirmPassword" placeholder="Confirm Password">
+                    </div>
+                    <button type="submit" class="col-12 col-md-12 btn btn-primary caabtn">Create an account</button>
+                    <p class="ahaa">Already have an account? <a id="loginlink" href="login.html">Login</a></p>
+<!-- Thêm một div để chứa thông báo -->
+<div id="successMessage" class="alert alert-success" style="display: none;">
+    Registration successful! You can start <a id="loginlink1" href="login.html">login here</a>.
+</div>
+
+                </form>
+            </div>
+            
+            
+        </div>
+    </div>
+</div>
+
+<!-- Modal thông báo -->
+<div class="modal fade" id="registrationNotificationModal" tabindex="-1" role="dialog" aria-labelledby="notificationModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="notificationModalLabel">Thông báo</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                Đã đăng ký tài khoản thành công! Bạn có thể bắt đầu đăng nhập.
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Đóng</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="signup.js"></script>
+</body>
+</html>
