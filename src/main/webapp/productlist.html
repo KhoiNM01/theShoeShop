@@ -1,74 +1,85 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <!-- Sử dụng Bootstrap qua CDN và CSS -->
+        <link rel="stylesheet" href="./bootstrap-5.0.2-dist/css/bootstrap.css">
+        <link rel="stylesheet" href="./bootstrap-5.0.2-dist/css/bootstrap.min.css">
+        <link rel="stylesheet" href="./bootstrap-5.0.2-dist/css/bootstrap.min.css.map">
+        
+        <!-- Sử dụng jQuery đầy đủ -->
+        <script src="./bootstrap-5.0.2-dist/js/bootstrap.min.js"></script>
+        <!-- <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> -->
+        <!-- <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script> -->
+        <!-- <script src="đường-dẫn-đến-thư-mục-bootstrap/js/popper.min.js"></script> -->
     
-    <!-- Sử dụng Bootstrap qua CDN và CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <!-- Sử dụng jQuery đầy đủ -->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>   
-    <link rel="stylesheet" href="productlist.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
-
-   
-
-   
-</head>
-<body >
-  <!-- Thanh Navbar -->
-<nav class="navbar navbar-expand-lg bg-dark fixed-top">
-    <div class="container">
-        <!-- Logo hoặc tên trang -->
-        <a class="navbar-brand" href="home.html"><img class="logoimg" src="img/theshoeshopabuja.png" alt=""></a>
-
-       <!-- Nút để mở menu trên điện thoại -->
-<button class="navbar-toggler custom-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-</button>
-
-<!--product-->
-<div class="dropdown">
-    <button class="btn btn-secondary dropdown-toggle" type="button" id="loginSignupDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-        Product
+        <script src="./bootstrap-5.0.2-dist/js/bootstrap.bundle.min.js"></script> 
+        <script src="./bootstrap-5.0.2-dist/js/bootstrap.min.js"></script>  
+        <link rel="stylesheet" href="productlist.css">
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+       
+    
+       
+    
+       
+    </head>
+    <body >
+      <!-- Thanh Navbar -->
+    <nav class="navbar navbar-expand-lg bg-dark fixed-top">
+        <div class="container">
+            <!-- Logo hoặc tên trang -->
+            <a class="navbar-brand" href="home.html"><img class="logoimg" src="img/theshoeshopabuja.png" alt=""></a>
+    
+           <!-- Nút để mở menu trên điện thoại -->
+    <button class="navbar-toggler custom-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
     </button>
-    <div class="dropdown-menu" aria-labelledby="loginSignupDropdown">
-                    <a class="dropdown-item" href="#section1">Adidas</a>
-                    <a class="dropdown-item" href="#section2">Nike</a>
-                    <a class="dropdown-item" href="#section3">Bitis</a>
-                    <a class="dropdown-item" href="#section4">Converse</a>
-                    <a class="dropdown-item" href="#section5">MLB</a>
-                    <a class="dropdown-item" href="#section6">New Balance</a>
-                    <a class="dropdown-item" href="#section7">Vans</a>
-                    <a class="dropdown-item" href="#section8">Ananas</a>                                           
-                </div>
     
-</div>
-
-      <!-- Thanh tìm kiếm -->
-        <form class="form-inline my-2 my-lg-0 ml-auto">
-            <div class="search-container">
-                <input class="form-controls" type="search" id="searchInput" placeholder="What are you looking for?" aria-label="Search">
-                <i class="fas fa-search fa-lg search-icon"></i>
-            </div>
-        </form>
-
-         <!-- Các liên kết ra giữa -->
-         
-        <!-- Dropdown cho "Login/Sign up" -->
-        <div class="dropdown">
-            <button class="btn btn-secondary dropdown-toggle" type="button" id="loginSignupDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Log in/Sign up
-            </button>
-            <div class="dropdown-menu" aria-labelledby="loginSignupDropdown">
-                <a class="dropdown-item" href="login.html">Log in</a>
-                <a class="dropdown-item" href="signup.html">Sign up</a>
-            </div>
-        </div>      
+    <!--product-->
+    <div class="dropdown">
+        <button class="btn btn-secondary dropdown-toggle" type="button" id="loginSignupDropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Product
+        </button>
+        <div class="dropdown-menu" aria-labelledby="loginSignupDropdown">
+                        <a class="dropdown-item" href="#section1">Adidas</a>
+                        <a class="dropdown-item" href="#section2">Nike</a>
+                        <a class="dropdown-item" href="#section3">Bitis</a>
+                        <a class="dropdown-item" href="#section4">Converse</a>
+                        <a class="dropdown-item" href="#section5">MLB</a>
+                        <a class="dropdown-item" href="#section6">New Balance</a>
+                        <a class="dropdown-item" href="#section7">Vans</a>
+                        <a class="dropdown-item" href="#section8">Ananas</a>                                           
+                    </div>
+        
     </div>
-</nav>    
+    
+    
+    
+          <!-- Thanh tìm kiếm -->
+            <form class="form-inline my-2 my-lg-0 ml-auto">
+                <div class="search-container">
+                    <input class="form-controls" type="search" id="searchInput" placeholder="What are you looking for?" aria-label="Search">
+                    <i class="fas fa-search fa-lg search-icon"></i>
+                </div>
+            </form>
+    
+             <!-- Các liên kết ra giữa -->
+             
+            <!-- Dropdown cho "Login/Sign up" -->
+            <div class="dropdown">
+                <button class="btn btn-secondary dropdown-toggle" type="button" id="loginSignupDropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Log in/Sign up
+                </button>
+                <div class="dropdown-menu" aria-labelledby="loginSignupDropdown">
+                    <a class="dropdown-item" href="login.html">Log in</a>
+                    <a class="dropdown-item" href="signup.html">Sign up</a>
+                </div>
+            </div>      
+        </div>
+    </nav>    
 
 <!-- Đường kẻ dưới phần "Exclusive" bằng border -->
 <div class="line"></div>
