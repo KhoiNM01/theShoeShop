@@ -248,18 +248,17 @@ section {
 }
 
 .products .box-container .box .image .icons {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    margin-top: 1.5rem;
-    font-size: 20px;
-    /* background-color: var(--pink); */
-    background-color: #b7b6b7ac;
+    position: relative ;
+    bottom: 45px;
+    left: 200px;
+    background-color:whitesmoke;
+    display: block;
+    width: 55px;
+    border: none;
+    border-radius: 6px;
 }
 
 .products .box-container .box .image .icons a {
-    padding: 1rem;
-    /* color: #fff; */
     color: #000;
 }
 
@@ -432,7 +431,7 @@ text-decoration: none;
 .footer{
     position: relative;
     bottom: 0;
-    background:#090909eb ;
+    background:rgba(10, 67, 127, 0.884);
     color: white;
     padding: 10px;
     padding-left: 200px;
@@ -447,4 +446,9 @@ text-decoration: none;
 .text-center img{
     width: 50px;
     height: 50px;
+}
+
+.list-unstyled a{
+    text-decoration: none;
+    color: #fff;
 }

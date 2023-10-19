@@ -59,7 +59,7 @@
 
 .search-icon {
     position: absolute;
-    right: 650px; /* Điều chỉnh khoảng cách từ biểu tượng đến phía bên phải */
+    right: 460px; /* Điều chỉnh khoảng cách từ biểu tượng đến phía bên phải */
     top: 50%;
     transform: translateY(-50%);
     color: rgba(0, 0, 0, 0.5); /* Màu mờ */
@@ -171,7 +171,7 @@
 .footer{
     position: relative;
     bottom: 0;
-    background:#090909eb ;
+    background:rgba(10, 67, 127, 0.884) ;
     color: white;
     padding: 10px;
     padding-left: 200px;
@@ -186,4 +186,9 @@
 .text-center img{
     width: 50px;
     height: 50px;
+}
+
+.list-unstyled a{
+    text-decoration: none;
+    color: #fff;
 }
