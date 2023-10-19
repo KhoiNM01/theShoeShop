@@ -2,6 +2,7 @@ package Model;
 
 public class Account {
     private String id;
+    private String password;
     private String name;
     private String gender;
     private String email;
@@ -9,14 +10,19 @@ public class Account {
     private String address;
     private String role;
 
-    public Account(String id, String name, String gender, String email, Integer phone, String address, String role) {
+    public Account(String id, String password, String name, String gender, String email, Integer phone, String address, String role) {
         this.id = id;
+        this.password = password;
         this.name = name;
         this.gender = gender;
         this.email = email;
         this.phone = phone;
         this.address = address;
         this.role = role;
+    }
+
+    public Account() {
+        
     }
 
     public String getAccountId() {
@@ -27,6 +33,22 @@ public class Account {
         this.id = id;
     }
 
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+    
     public String getCustomerName() {
         return name;
     }
@@ -74,6 +96,4 @@ public class Account {
     public void setRole(String role) {
         this.role = role;
     }
-
-    
 }

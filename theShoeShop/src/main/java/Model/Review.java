@@ -5,36 +5,36 @@ import java.sql.Date;
 public class Review {
 
     private String id;
-    private String productID;
+    private String productId;
     private String customerName;
     private Integer rating;
     private String comment;
     private Date date;
 
 
-    public Review(String id, String productID, String customerName, Integer rating, String comment, Date date) {
+    public Review(String id, String productId, String customerName, Integer rating, String comment, Date date) {
         this.id = id;
-        this.productID = productID;
+        this.productId = productId;
         this.customerName = customerName;
         this.rating = rating;
         this.comment = comment;
         this.date = date;
     }
 
-    public String getReviewID() {
+    public String getReviewId() {
         return id;
     }
 
-    public void setReviewID(String id) {
+    public void setReviewId(String id) {
         this.id = id;
     }
 
-    public String getProductID() {
-        return productID;
+    public String getProductId() {
+        return productId;
     }
 
-    public void setProductID(String productID) {
-        this.productID = productID;
+    public void setProductId(String productId) {
+        this.productId = productId;
     }
 
     public String getCustomerName() {

@@ -17,6 +17,10 @@ public class Order {
         this.status = status;
     }
 
+    public Order() {
+        
+    }
+
     public String getOrderId() {
         return id;
     }
@@ -56,6 +60,4 @@ public class Order {
     public void setStatus(String status) {
         this.status = status;
     }
-    
-    
 }

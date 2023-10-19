@@ -17,6 +17,10 @@ public class Product {
         this.supplyId = supplyId;
     }
 
+    public Product() {
+        
+    }
+
     public String getProductId() {
         return id;
     }
