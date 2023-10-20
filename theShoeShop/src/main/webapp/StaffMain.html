@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Sử dụng Bootstrap qua CDN và CSS -->
+    <link rel="stylesheet" href="./bootstrap-5.0.2-dist/css/bootstrap.css">
+    <link rel="stylesheet" href="./bootstrap-5.0.2-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./bootstrap-5.0.2-dist/css/bootstrap.min.css.map">
+
+    <!-- Sử dụng jQuery đầy đủ -->
+    <script src="./bootstrap-5.0.2-dist/js/bootstrap.min.js"></script>
+    <!-- <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script> -->
+    <!-- <script src="đường-dẫn-đến-thư-mục-bootstrap/js/popper.min.js"></script> -->
+
+    <script src="./bootstrap-5.0.2-dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./bootstrap-5.0.2-dist/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="StaffMain.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+
+
+
+
+
+</head>
+
+<body>
+    <!-- Thanh Navbar -->
+    <nav class="navbar navbar-expand-lg bg-dark fixed-top">
+        <div class="container">
+            <!-- Logo hoặc tên trang -->
+            <a class="navbar-brand" href="home.html"><img class="adlogo" src="img/adminlogo.png" alt=""></a>
+
+            <!-- Nút để mở menu trên điện thoại -->
+            <button class="navbar-toggler custom-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <span class="texthl">Hello: Admin</span>
+        </div>
+    </nav>
+
+    <div class="jumbotron jumbotron-fluid">
+        <div class="container-fluid">
+            <div class="tab">
+                <button class="tablinks" onclick="openTab('AdminHome')">Admin Home</button>
+                <button class="tablinks" onclick="openTab('StaffHome')">Staff Home</button>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="container-fluid">
+        <div class="row">
+            <!-- Sidebar bên trái cho Admin -->
+            <div class="col-md-2 col-lg-2 col-sm-12 left-sidebar" id="admin-sidebar">
+                <div class="sidebar">
+                    <ul id="admin-menu">
+                        <!-- Thêm các lựa chọn cho Admin sidebar -->
+                        <li><a href="#" onclick="openTab('ManageAccount')">Manage Account</a></li>
+                        <li><a href="#" onclick="openTab('ManageInventory')">Manage Inventory</a></li>
+                        <li><a href="#" onclick="openTab('StatisticReport')">Statistic Report</a></li>
+                        <li><a href="#" onclick="openTab('LogOut')">Log Out</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Sidebar bên trái cho Staff -->
+            <div class="col-md-2 col-lg-2 col-sm-12 left-sidebar" id="staff-sidebar">
+                <div class="sidebar">
+                    <ul id="staff-menu">
+                        <!-- Thêm các lựa chọn cho Staff sidebar -->
+                        <li><a href="#" onclick="openTab('StaffOption1')">Staff Option 1</a></li>
+                        <li><a href="#" onclick="openTab('StaffOption2')">Manage Order</a></li>
+                        <li><a href="#" onclick="openTab('StaffOption3')">Manage Product</a></li>
+                        <!-- Thêm lựa chọn cho Staff sidebar tại đây -->
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Nội dung phía bên phải -->
+            <div class="col-md-10 col-lg-10 col-sm-12" id="right-content">
+
+                <div class="tabcontent home-admin" id="AdminHome">
+                    <!-- Nội dung trang Home Admin -->
+                    <h2>Welcome to Home Admin</h2>
+                    <p>This is the Home page for Admin.</p>
+
+                </div>
+
+                <div class="tabcontent home-staff" id="StaffHome">
+                    <!-- Nội dung trang Home Staff -->
+                    <h2>Welcome to Home Staff</h2>
+                    <p>This is the Home page for Staff.</p>
+                </div>
+
+                <div class="tabcontent home-admin" id="ManageAccount">
+                    <!-- Nội dung trang Manage Account của Admin -->
+
+
+                    <div class="container">
+                        <div class="row">
+
+
+                            <div>
+
+                                <h2>My List Account</h2>
+                                <form class="profile">
+                                    <table>
+                                        <tr class="title">
+                                            <th>Username</th>
+                                            <th>Phone</td>
+                                            <th>Email</th>
+                                            <th>Address</td>
+                                            <th>Edit/ Delete</td>
+
+                                        </tr>
+                                        <tr>
+                                            <td>Le Phan Hung Thang</td>
+                                            <td>0912345678</td>
+                                            <td>thanglphce171637@gmail.com</td>
+                                            <td>3/2, Ninh Kieu, Can Tho</td>
+                                            <td>
+                                                <a href=""> <svg xmlns="http://www.w3.org/2000/svg" width="21"
+                                                        height="23" viewBox="0 0 21 23" fill="none">
+                                                        <path
+                                                            d="M9.77428 3.12109H3.65109C3.1871 3.12109 2.74211 3.33181 2.41402 3.70688C2.08593 4.08195 1.90161 4.59066 1.90161 5.12109V19.1211C1.90161 19.6515 2.08593 20.1602 2.41402 20.5353C2.74211 20.9104 3.1871 21.1211 3.65109 21.1211H15.8975C16.3615 21.1211 16.8064 20.9104 17.1345 20.5353C17.4626 20.1602 17.647 19.6515 17.647 19.1211V12.1211"
+                                                            stroke="black" stroke-width="2" stroke-linecap="round"
+                                                            stroke-linejoin="round" />
+                                                        <path
+                                                            d="M16.3349 1.62132C16.6829 1.2235 17.1549 1 17.647 1C18.1392 1 18.6112 1.2235 18.9592 1.62132C19.3071 2.01915 19.5026 2.55871 19.5026 3.12132C19.5026 3.68393 19.3071 4.2235 18.9592 4.62132L10.6491 14.1213L7.15015 15.1213L8.02489 11.1213L16.3349 1.62132Z"
+                                                            stroke="black" stroke-width="2" stroke-linecap="round"
+                                                            stroke-linejoin="round" />
+                                                    </svg> </a>
+
+                                                <a href=""><svg xmlns="http://www.w3.org/2000/svg" width="22"
+                                                        height="24" viewBox="0 0 22 24" fill="none">
+                                                        <path
+                                                            d="M18.1356 5.57143H5.30609L6.47241 21H15.803L16.9693 5.57143H4.13977M11.1377 9.42857V17.1429M14.0535 9.42857L13.4703 17.1429M8.2219 9.42857L8.80506 17.1429M8.80506 5.57143L9.38822 3H12.8872L13.4703 5.57143"
+                                                            stroke="black" stroke-width="1.56" stroke-linecap="round"
+                                                            stroke-linejoin="round" />
+                                                        <path
+                                                            d="M18.1356 5.57143H5.30609L6.47241 21H15.803L16.9693 5.57143H4.13977M11.1377 9.42857V17.1429M14.0535 9.42857L13.4703 17.1429M8.2219 9.42857L8.80506 17.1429M8.80506 5.57143L9.38822 3H12.8872L13.4703 5.57143"
+                                                            stroke="black" stroke-opacity="0.2" stroke-width="1.56"
+                                                            stroke-linecap="round" stroke-linejoin="round" />
+                                                        <path
+                                                            d="M18.1356 5.57143H5.30609L6.47241 21H15.803L16.9693 5.57143H4.13977M11.1377 9.42857V17.1429M14.0535 9.42857L13.4703 17.1429M8.2219 9.42857L8.80506 17.1429M8.80506 5.57143L9.38822 3H12.8872L13.4703 5.57143"
+                                                            stroke="black" stroke-opacity="0.2" stroke-width="1.56"
+                                                            stroke-linecap="round" stroke-linejoin="round" />
+                                                        <path
+                                                            d="M18.1356 5.57143H5.30609L6.47241 21H15.803L16.9693 5.57143H4.13977M11.1377 9.42857V17.1429M14.0535 9.42857L13.4703 17.1429M8.2219 9.42857L8.80506 17.1429M8.80506 5.57143L9.38822 3H12.8872L13.4703 5.57143"
+                                                            stroke="black" stroke-opacity="0.2" stroke-width="1.56"
+                                                            stroke-linecap="round" stroke-linejoin="round" />
+                                                        <path
+                                                            d="M18.1356 5.57143H5.30609L6.47241 21H15.803L16.9693 5.57143H4.13977M11.1377 9.42857V17.1429M14.0535 9.42857L13.4703 17.1429M8.2219 9.42857L8.80506 17.1429M8.80506 5.57143L9.38822 3H12.8872L13.4703 5.57143"
+                                                            stroke="black" stroke-opacity="0.2" stroke-width="1.56"
+                                                            stroke-linecap="round" stroke-linejoin="round" />
+                                                    </svg> </a>
+                                            </td>
+                                        </tr>
+
+                                        <tr>
+
+                                        </tr>
+                                    </table>
+
+                                </form>
+
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="tabcontent home-admin" id="ManageInventory">
+                    <!-- Nội dung trang Manage Inventory của Admin -->
+                    <h2>Manage Inventory</h2>
+                    <table class="table table-bordered">
+                        <thead>
+                            <tr>
+                                <th>Product ID</th>
+                                <th>Brand</th>
+                                <th>Supplier</th>
+                                <th>Quantity</th>
+                                <th>Quantity Sold</th>
+                                <th>Iventory</th>
+                                <th>Import Day</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>3</td>
+                                <td>Brand C</td>
+                                <td>Supplier Z</td>
+                                <td>10</td>
+                                <td>7</td>
+                                <td>3</td>
+                                <td>20/6</td>
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td>Brand D</td>
+                                <td>Supplier W</td>
+                                <td>19</td>
+                                <td>10</td>
+                                <td>9</td>
+                                <td>20/6</td>
+                            </tr>
+                            <!-- Thêm dữ liệu cho các hàng khác tại đây -->
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="tabcontent home-admin" id="StatisticReport">
+                    <!-- Nội dung trang Statistic Report của Admin -->
+                    <h1>Monthly Revenue</h1>
+                    <canvas id="revenueChart" width="400" height="200"></canvas>
+
+                    <script>
+                        // Sample data (replace with your actual data)
+                        const months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul"];
+                        const revenueData = [1000, 1200, 900, 1100, 1300, 1400, 1500];
+
+                        // Create a chart
+                        const ctx = document.getElementById("revenueChart").getContext("2d");
+                        new Chart(ctx, {
+                            type: "line",
+                            data: {
+                                labels: months,
+                                datasets: [{
+                                    label: "Monthly Revenue",
+                                    data: revenueData,
+                                    borderColor: "blue",
+                                    fill: false
+                                }]
+                            }
+                        });
+                    </script>
+                </div>
+
+                <div class="tabcontent home-admin" id="LogOut">
+                    <!-- Nội dung trang Log Out của Admin -->
+
+
+                </div>
+
+                <div class="tabcontent home-staff" id="StaffOption1">
+                    <!-- Nội dung trang Staff Option 1 -->
+                    <h2>Staff Option 1</h2>
+                    <p>This is the Staff Option 1 page for Staff.</p>
+                </div>
+
+                <div class="tabcontent home-staff" id="StaffOption2">
+                    <!-- Nội dung trang Staff Option 2 -->
+                    <h2>Manage Order</h2>
+                    <form class="profile">
+                        <table>
+                            <tr class="title">
+                                <th>Username</th>
+                                <th>Name Product</td>
+                                <th>Quantity</th>
+                                <th>Price</td>
+                                <th>Date Order</th>
+                                <th>Delete</td>
+
+                            </tr>
+                            <tr>
+                                <td>Le Phan Hung Thang</td>
+                                <td>Converse Chuck Taylor All Star</td>
+                                <td>1</td>
+                                <td>1,390,000</td>
+                                <td>20/10/2023</td>
+                                <td>
+                                    <a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="24"
+                                            viewBox="0 0 22 24" fill="none">
+                                            <path
+                                                d="M18.1356 5.57143H5.30609L6.47241 21H15.803L16.9693 5.57143H4.13977M11.1377 9.42857V17.1429M14.0535 9.42857L13.4703 17.1429M8.2219 9.42857L8.80506 17.1429M8.80506 5.57143L9.38822 3H12.8872L13.4703 5.57143"
+                                                stroke="black" stroke-width="1.56" stroke-linecap="round"
+                                                stroke-linejoin="round" />
+                                            <path
+                                                d="M18.1356 5.57143H5.30609L6.47241 21H15.803L16.9693 5.57143H4.13977M11.1377 9.42857V17.1429M14.0535 9.42857L13.4703 17.1429M8.2219 9.42857L8.80506 17.1429M8.80506 5.57143L9.38822 3H12.8872L13.4703 5.57143"
+                                                stroke="black" stroke-opacity="0.2" stroke-width="1.56"
+                                                stroke-linecap="round" stroke-linejoin="round" />
+                                            <path
+                                                d="M18.1356 5.57143H5.30609L6.47241 21H15.803L16.9693 5.57143H4.13977M11.1377 9.42857V17.1429M14.0535 9.42857L13.4703 17.1429M8.2219 9.42857L8.80506 17.1429M8.80506 5.57143L9.38822 3H12.8872L13.4703 5.57143"
+                                                stroke="black" stroke-opacity="0.2" stroke-width="1.56"
+                                                stroke-linecap="round" stroke-linejoin="round" />
+                                            <path
+                                                d="M18.1356 5.57143H5.30609L6.47241 21H15.803L16.9693 5.57143H4.13977M11.1377 9.42857V17.1429M14.0535 9.42857L13.4703 17.1429M8.2219 9.42857L8.80506 17.1429M8.80506 5.57143L9.38822 3H12.8872L13.4703 5.57143"
+                                                stroke="black" stroke-opacity="0.2" stroke-width="1.56"
+                                                stroke-linecap="round" stroke-linejoin="round" />
+                                            <path
+                                                d="M18.1356 5.57143H5.30609L6.47241 21H15.803L16.9693 5.57143H4.13977M11.1377 9.42857V17.1429M14.0535 9.42857L13.4703 17.1429M8.2219 9.42857L8.80506 17.1429M8.80506 5.57143L9.38822 3H12.8872L13.4703 5.57143"
+                                                stroke="black" stroke-opacity="0.2" stroke-width="1.56"
+                                                stroke-linecap="round" stroke-linejoin="round" />
+                                        </svg></a>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>Le Phan Hung Thang</td>
+                                <td>Converse Chuck Taylor All Star</td>
+                                <td>1</td>
+                                <td>1,390,000</td>
+                                <td>20/10/2023</td>
+                                <td>
+                                    <a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="24"
+                                            viewBox="0 0 22 24" fill="none">
+                                            <path
+                                                d="M18.1356 5.57143H5.30609L6.47241 21H15.803L16.9693 5.57143H4.13977M11.1377 9.42857V17.1429M14.0535 9.42857L13.4703 17.1429M8.2219 9.42857L8.80506 17.1429M8.80506 5.57143L9.38822 3H12.8872L13.4703 5.57143"
+                                                stroke="black" stroke-width="1.56" stroke-linecap="round"
+                                                stroke-linejoin="round" />
+                                            <path
+                                                d="M18.1356 5.57143H5.30609L6.47241 21H15.803L16.9693 5.57143H4.13977M11.1377 9.42857V17.1429M14.0535 9.42857L13.4703 17.1429M8.2219 9.42857L8.80506 17.1429M8.80506 5.57143L9.38822 3H12.8872L13.4703 5.57143"
+                                                stroke="black" stroke-opacity="0.2" stroke-width="1.56"
+                                                stroke-linecap="round" stroke-linejoin="round" />
+                                            <path
+                                                d="M18.1356 5.57143H5.30609L6.47241 21H15.803L16.9693 5.57143H4.13977M11.1377 9.42857V17.1429M14.0535 9.42857L13.4703 17.1429M8.2219 9.42857L8.80506 17.1429M8.80506 5.57143L9.38822 3H12.8872L13.4703 5.57143"
+                                                stroke="black" stroke-opacity="0.2" stroke-width="1.56"
+                                                stroke-linecap="round" stroke-linejoin="round" />
+                                            <path
+                                                d="M18.1356 5.57143H5.30609L6.47241 21H15.803L16.9693 5.57143H4.13977M11.1377 9.42857V17.1429M14.0535 9.42857L13.4703 17.1429M8.2219 9.42857L8.80506 17.1429M8.80506 5.57143L9.38822 3H12.8872L13.4703 5.57143"
+                                                stroke="black" stroke-opacity="0.2" stroke-width="1.56"
+                                                stroke-linecap="round" stroke-linejoin="round" />
+                                            <path
+                                                d="M18.1356 5.57143H5.30609L6.47241 21H15.803L16.9693 5.57143H4.13977M11.1377 9.42857V17.1429M14.0535 9.42857L13.4703 17.1429M8.2219 9.42857L8.80506 17.1429M8.80506 5.57143L9.38822 3H12.8872L13.4703 5.57143"
+                                                stroke="black" stroke-opacity="0.2" stroke-width="1.56"
+                                                stroke-linecap="round" stroke-linejoin="round" />
+                                        </svg></a>
+                                </td>
+                            </tr>
+                        </table>
+
+                    </form>
+                </div>
+
+                <div class="tabcontent home-staff" id="StaffOption3">
+                    <!-- Nội dung trang Staff Option 3 -->
+                    <div class="tabbar-product">
+                        <h2>Manage Product</h2>
+                        <a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none">
+                                <path
+                                    d="M19 3H5C3.89543 3 3 3.89543 3 5V19C3 20.1046 3.89543 21 5 21H19C20.1046 21 21 20.1046 21 19V5C21 3.89543 20.1046 3 19 3Z"
+                                    stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                <path d="M12 8V16" stroke="black" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                                <path d="M8 12H16" stroke="black" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg></a>
+                    </div>
+                    <form class="profile">
+                        <table>
+                            <tr class="title">
+                                <th>Product</th>
+                                <th>Name Product</td>
+                                <th>Supplier</th>
+                                <th>Price</td>
+                                <th>Edit/Delete</td>
+
+                            </tr>
+                            <tr>
+                                <td><img src="https://bizweb.dktcdn.net/thumb/1024x1024/100/373/032/products/watermarked-converse-chuck-taylor-all-star-1970s-black-white-high.png?v=1680706026480"
+                                        alt="hình ở đây" style="width: 100px;" class="image-center"></td>
+                                <td>Converse Chuck Taylor All Star</td>
+                                <td>Converse</td>
+                                <td>1,390,000</td>
+                                <td>
+                                    <a href="#"> <svg xmlns="http://www.w3.org/2000/svg" width="21" height="23"
+                                            viewBox="0 0 21 23" fill="none">
+                                            <path
+                                                d="M9.77428 3.12109H3.65109C3.1871 3.12109 2.74211 3.33181 2.41402 3.70688C2.08593 4.08195 1.90161 4.59066 1.90161 5.12109V19.1211C1.90161 19.6515 2.08593 20.1602 2.41402 20.5353C2.74211 20.9104 3.1871 21.1211 3.65109 21.1211H15.8975C16.3615 21.1211 16.8064 20.9104 17.1345 20.5353C17.4626 20.1602 17.647 19.6515 17.647 19.1211V12.1211"
+                                                stroke="black" stroke-width="2" stroke-linecap="round"
+                                                stroke-linejoin="round" />
+                                            <path
+                                                d="M16.3349 1.62132C16.6829 1.2235 17.1549 1 17.647 1C18.1392 1 18.6112 1.2235 18.9592 1.62132C19.3071 2.01915 19.5026 2.55871 19.5026 3.12132C19.5026 3.68393 19.3071 4.2235 18.9592 4.62132L10.6491 14.1213L7.15015 15.1213L8.02489 11.1213L16.3349 1.62132Z"
+                                                stroke="black" stroke-width="2" stroke-linecap="round"
+                                                stroke-linejoin="round" />
+                                        </svg> </a>
+
+                                    <a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="24"
+                                            viewBox="0 0 22 24" fill="none">
+                                            <path
+                                                d="M18.1356 5.57143H5.30609L6.47241 21H15.803L16.9693 5.57143H4.13977M11.1377 9.42857V17.1429M14.0535 9.42857L13.4703 17.1429M8.2219 9.42857L8.80506 17.1429M8.80506 5.57143L9.38822 3H12.8872L13.4703 5.57143"
+                                                stroke="black" stroke-width="1.56" stroke-linecap="round"
+                                                stroke-linejoin="round" />
+                                            <path
+                                                d="M18.1356 5.57143H5.30609L6.47241 21H15.803L16.9693 5.57143H4.13977M11.1377 9.42857V17.1429M14.0535 9.42857L13.4703 17.1429M8.2219 9.42857L8.80506 17.1429M8.80506 5.57143L9.38822 3H12.8872L13.4703 5.57143"
+                                                stroke="black" stroke-opacity="0.2" stroke-width="1.56"
+                                                stroke-linecap="round" stroke-linejoin="round" />
+                                            <path
+                                                d="M18.1356 5.57143H5.30609L6.47241 21H15.803L16.9693 5.57143H4.13977M11.1377 9.42857V17.1429M14.0535 9.42857L13.4703 17.1429M8.2219 9.42857L8.80506 17.1429M8.80506 5.57143L9.38822 3H12.8872L13.4703 5.57143"
+                                                stroke="black" stroke-opacity="0.2" stroke-width="1.56"
+                                                stroke-linecap="round" stroke-linejoin="round" />
+                                            <path
+                                                d="M18.1356 5.57143H5.30609L6.47241 21H15.803L16.9693 5.57143H4.13977M11.1377 9.42857V17.1429M14.0535 9.42857L13.4703 17.1429M8.2219 9.42857L8.80506 17.1429M8.80506 5.57143L9.38822 3H12.8872L13.4703 5.57143"
+                                                stroke="black" stroke-opacity="0.2" stroke-width="1.56"
+                                                stroke-linecap="round" stroke-linejoin="round" />
+                                            <path
+                                                d="M18.1356 5.57143H5.30609L6.47241 21H15.803L16.9693 5.57143H4.13977M11.1377 9.42857V17.1429M14.0535 9.42857L13.4703 17.1429M8.2219 9.42857L8.80506 17.1429M8.80506 5.57143L9.38822 3H12.8872L13.4703 5.57143"
+                                                stroke="black" stroke-opacity="0.2" stroke-width="1.56"
+                                                stroke-linecap="round" stroke-linejoin="round" />
+                                        </svg></a>
+                                </td>
+                            </tr>
+                        </table>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Khai báo biến để lưu trạng thái của sidebar
+        var adminSidebar = document.getElementById('admin-sidebar');
+        var staffSidebar = document.getElementById('staff-sidebar');
+
+        // Ẩn sidebar và nội dung khi trang được tải
+        adminSidebar.style.display = 'none';
+        staffSidebar.style.display = 'none';
+        document.getElementById('right-content').style.display = 'none';
+
+        function openTab(tabName) {
+            // Ẩn tất cả các tabcontent
+            var tabcontent = document.getElementsByClassName("tabcontent");
+            for (var i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+
+            // Ẩn tất cả nội dung của sidebar
+            // Hiển thị nội dung tương ứng
+            if (tabName === 'AdminHome') {
+                // Hiển thị sidebar và nội dung của tab Admin
+                adminSidebar.style.display = 'block';
+                staffSidebar.style.display = 'none';
+                document.getElementById('AdminHome').style.display = 'block';
+            } else if (tabName === 'StaffHome') {
+                // Hiển thị sidebar và nội dung của tab Staff
+                staffSidebar.style.display = 'block';
+                adminSidebar.style.display = 'none';
+
+                document.getElementById('StaffHome').style.display = 'block';
+            } else {
+                // Hiển thị nội dung bên phải khi chọn các lựa chọn trong sidebar
+                document.getElementById(tabName).style.display = 'block';
+                document.getElementById('right-content').style.display = 'block';
+
+
+            }
+
+
+
+        }
+
+        // Mặc định hiển thị tab Admin Home khi trang được tải
+        openTab('AdminHome');
+    </script>
+
+</body>
+
+</html>
