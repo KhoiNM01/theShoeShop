@@ -1,0 +1,231 @@
+/* Tùy chỉnh thanh tabar */
+
+.navbar {
+    background-color: rgba(10, 67, 127, 1) !important;
+    padding: 15px 0; /* Khoảng cách dưới và trên */
+    box-shadow: none; /* Loại bỏ đổ bóng */
+}
+
+/* Thêm màu nền thanh tabar khi hover */
+.navbar a:hover {
+    background-color: #191970; /* Màu và độ dày của nền */
+    text-decoration: none;
+    
+    
+}
+
+.logoimg{
+    width: 130PX;
+    height: 50PX;
+    margin: 0 0 0 0;
+    margin-top: 10PX;
+}
+
+/* Định dạng cho dropdown */
+.product-button .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    border-radius: 5px;
+}
+
+/* Đổi màu chữ product */
+.navbar a {
+    color: #fff; /* Màu đen (hoặc mã màu khác nếu bạn muốn) */
+    margin-right: 20px; /* Khoảng cách giữa các tab */
+}
+
+/* Định dạng cho thanh tìm kiếm */
+.search-container {
+    display: flex;
+    align-items: center;
+}
+
+.search-container input {
+    padding: 10px;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+}
+
+.search-container button {
+    padding: 10px 20px;
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 10px; /* Khoảng cách giữa ô tìm kiếm và nút tìm kiếm */
+}
+
+.search-container button:hover {
+    background-color: #2980b9;
+}
+
+.form-controls {
+    
+    border: none; /* Loại bỏ đường viền */
+    
+    background-color: rgb(244, 243, 243); 
+    color: #000; /* Màu chữ (màu đen trong ví dụ này) */
+    font-size: 16px; /* Kích thước chữ */
+    width: 540px; /* Kích thước ô tìm kiếm */
+    margin-right: 80px; /* Khoảng cách từ ô tìm kiếm đến cạnh phải của navbar */
+   
+}
+
+.search-icon {
+    position: absolute;
+    right: 460px; /* Điều chỉnh khoảng cách từ biểu tượng đến phía bên phải */
+    top: 50%;
+    transform: translateY(-50%);
+    color: rgba(0, 0, 0, 0.5); /* Màu mờ */
+    cursor: pointer;
+    transition: color 0.3s ease; /* Hiệu ứng mờ */
+}
+
+.search-icon:hover {
+    color: rgba(0, 0, 0, 0.8); /* Màu khi hover */
+}
+
+/* Định dạng cho dropdown button */
+.dropdown-toggle {
+    background-color: transparent;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    font-weight: bold; /* In đậm chữ */
+    margin-left: 30px;
+    
+}
+
+/* Định dạng khi hover và focus vào dropdown button */
+.dropdown-toggle:hover, .dropdown-toggle:focus {
+    background-color: transparent;
+    border: none;
+    color: #e5e5e5;
+}
+
+/* Định dạng cho dropdown menu */
+.dropdown-menu {
+    background-color: rgb(9, 85, 165);
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+    width: 150px; /* Điều chỉnh độ rộng của dropdown menu */
+    margin-left: 20px;
+}
+
+/* Định dạng cho các tùy chọn trong dropdown menu */
+.dropdown-item {
+    color: #fff;
+padding: 10px 15px;
+    text-align: center;
+    transition: background-color 0.3s;
+}
+
+/* Định dạng khi hover vào các tùy chọn trong dropdown menu */
+.dropdown-item:hover {
+    background-color: #191970;
+    color: #fff;
+    text-decoration: none;
+}
+/*tabar sau khi login */
+.fa-circle-user{
+ font-size: 28px;
+}
+
+.dropdown a:hover{
+    opacity: 0.5;
+    text-decoration: none;
+    /* background-color: rgba(10, 67, 127, 1) ; */
+    background-color: transparent;
+}
+
+.fa-cart-shopping{
+    font-size: 28px;
+    margin-left: 10px;
+    color: white;
+}
+
+.fa-cart-shopping:hover{
+    opacity: 0.5;
+    text-decoration: none;
+    /* background-color: rgba(10, 67, 127, 1) ; */
+    background-color: transparent !important;
+}
+
+
+/* body */
+    /* bill */
+#infoAddress input{
+    display: flex;
+    width: 500px;
+    border: 0;
+    border-radius: 5px;
+background: var(--Secondary, #e7e6e6);
+}
+#saveinfo input{
+    display: flex;
+   width: 20px;
+   margin-right: 10px;
+}
+    /* product */
+#product{
+    margin-top: 50px;
+    margin-left: 100px;
+}
+
+ .image{
+    display: flex;
+    /* width: 500px; */
+align-items: center;
+justify-content: space-around;
+ }
+.image img{
+    width: 54px;
+}
+label{
+    display: flex;
+}
+.bill label{
+    justify-content: space-between;
+align-items: center;
+}
+.pay input{
+    margin-right: 10px;
+}
+.pay .bank{
+    justify-content: space-between;
+}
+.bank img{
+    width: 30px;
+}
+.form-row{
+    margin-top: 10px;
+}
+
+/* footer */
+.footer{
+    position: relative;
+    bottom: 0;
+    background:#090909eb ;
+    color: white;
+    padding: 20px;
+    padding-left: 200px;
+    padding-right: 200px;
+    margin-top: 50px;
+   
+}
+.footer a{
+    color: white;
+    text-decoration: none;
+}
+
+.text-center svg{
+    padding: 10px;
+    width: 40px;
+    height: 40px;
+}
