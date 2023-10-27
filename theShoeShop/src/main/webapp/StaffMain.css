@@ -1,0 +1,196 @@
+/* Tùy chỉnh thanh tabar */
+.navbar {
+  background-color: rgba(0, 0, 0, 0.837) !important;
+  padding: 15px 0; /* Khoảng cách dưới và trên */
+  box-shadow: none; /* Loại bỏ đổ bóng */
+}
+
+/* Thêm màu nền thanh tabar khi hover */
+.navbar a:hover {
+  background-color: rgba(0, 0, 0, 0.837); /* Màu và độ dày của nền */
+  text-decoration: none;
+  
+}
+
+.adlogo{
+  width: 200PX;
+  height: 40PX;
+  margin: 0 0 0 0;
+  margin-top: 10PX;
+}
+
+.texthl{
+  
+  margin-top: 10px;
+  color: gray;
+}
+
+.jumbotron{
+  margin-top: 90px;
+  background-color: whitesmoke;
+  
+}
+
+/* Thiết lập kiểu dáng cho thanh tab */
+.tab {
+  overflow: hidden;
+ 
+}
+
+.tab button {
+  
+  background-color: #333333f7;
+  color: white;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 10px 100px;
+  transition: 0.3s;
+}
+
+.tab button:hover {
+  background-color: #555;
+}
+
+/* Ẩn toàn bộ nội dung liên quan đến tab, trừ tab được chọn */
+.tabcontent {
+  display: none;
+}
+
+/* Tạo thanh tab riêng cho Admin và Staff */
+.tabcontent.home-admin {
+  display: block;
+}
+
+.tabcontent.home-staff {
+  display: none;
+}
+
+   /* Thêm CSS để tạo đường ngăn cách bằng border-right */
+   .left-sidebar {
+      border-right: 1px solid #000; /* Màu và kiểu đường ngăn cách */
+      height: 1000px; /* Chiều cao đầy đủ */
+  }
+
+ /* Thêm CSS để chỉnh màu và loại bỏ dấu chấm đầu của danh sách */
+ .left-sidebar ul {
+  list-style-type: none; /* Loại bỏ dấu chấm đầu */
+  margin-top: 10px;
+}
+
+.left-sidebar ul li a {
+font-size: larger;
+font-weight: bold;
+  color: #000; /* Đổi màu chữ trong danh sách thành màu xanh */
+  
+  text-decoration: none; /* Loại bỏ gạch chân mặc định cho liên kết */
+}
+
+.tabbar-product {
+  justify-content: space-between;
+  display: flex;
+}
+
+.tabbar-product svg {
+  margin: 12px;
+}
+
+.left-sidebar ul li{
+margin-top: 20px;
+}
+
+.left-sidebar ul li a:hover {
+  color: red; /* Đổi màu chữ khi di chuột qua liên kết */
+}
+
+.container-fluid{
+padding: 0;
+}
+
+
+
+/* demo */
+/* boby */
+
+
+.box-title{
+display: flex;
+background-color: rgb(233, 232, 232);
+width: auto;
+height: 50px;
+flex-shrink: 0;
+border-radius: 4px;
+align-items: center;
+justify-content: space-around;
+margin-top: 30px;
+margin-bottom: 30px;
+}
+
+section{
+flex-shrink: 0;
+border-radius: 4px;
+background: var(--Primary, #FFF);
+margin-bottom: 50px;
+
+}
+
+
+
+/* .box form{
+display: flex;
+width: 83.65px;
+height: 44px;
+padding: 6px 23.65px 6px 12px;
+align-items: center;
+flex-shrink: 0;
+border-radius: 4px;
+border: 1.5px solid rgba(0, 0, 0, 0.40);
+} */
+.box{
+width: auto;
+height: 98px;
+/* flex-shrink: 0; */
+border-radius: 4px;
+background: var(--Primary, #FFF);
+margin-bottom: 20px;
+/* Categogy/20 */
+box-shadow: 0px 2px 10px 2px rgba(0, 0, 0, 0.20);
+}
+
+/* .box-title p {
+display: inline-block;
+
+
+}
+
+.account1 p {
+
+display: inline-block;
+margin-right: 100px; /* Điều chỉnh khoảng cách giữa "Username" và "Password" */
+/* } */ 
+
+table{
+border: 0;
+}
+table, th{
+
+border: 1px solid rgb(233, 232, 232);
+border-collapse: collapse;
+}
+th{
+background-color: rgb(233, 232, 232);
+width: 795px;
+height: 25px;
+text-align: center;
+}
+svg{
+margin: 20px;
+}
+td{
+margin-right: 50px;
+text-align: center;
+}
+a{
+text-decoration: none;
+}
