@@ -3,69 +3,61 @@ package Model;
 import java.sql.Date;
 
 public class Review {
+    private Integer accountID;
+    private Integer productsID;
+    private String contentReview;
+    private Date dateReview;
+    private Integer maReview;
 
-    private String id;
-    private String productId;
-    private String customerName;
-    private Integer rating;
-    private String comment;
-    private Date date;
-
-
-    public Review(String id, String productId, String customerName, Integer rating, String comment, Date date) {
-        this.id = id;
-        this.productId = productId;
-        this.customerName = customerName;
-        this.rating = rating;
-        this.comment = comment;
-        this.date = date;
+    public Review(Integer accountID, Integer productsID, String contentReview, Date dateReview, Integer maReview) {
+        this.accountID = accountID;
+        this.productsID = productsID;
+        this.contentReview = contentReview;
+        this.dateReview = dateReview;
+        this.maReview = maReview;
     }
 
-    public String getReviewId() {
-        return id;
+    public Review() {
+        
     }
 
-    public void setReviewId(String id) {
-        this.id = id;
+    public Integer getAccountID() {
+        return accountID;
     }
 
-    public String getProductId() {
-        return productId;
+    public void setAccountID(Integer accountID) {
+        this.accountID = accountID;
     }
 
-    public void setProductId(String productId) {
-        this.productId = productId;
+    public Integer getProductID() {
+        return productsID;
     }
 
-    public String getCustomerName() {
-        return customerName;
+    public void setProductID(Integer productsID) {
+        this.productsID = productsID;
     }
 
-    public void setCustomerName(String customerName) {
-        this.customerName = customerName;
+    public String getContentReview() {
+        return contentReview;
     }
 
-    public Integer getRating() {
-        return rating;
+    public void setContentReview(String contentReview) {
+        this.contentReview = contentReview;
     }
 
-    public void setRating(Integer rating) {
-        this.rating = rating;
+    public Date getDateReview() {
+        return dateReview;
     }
 
-    public String getComment() {
-        return comment;
+    public void setDateReview(Date dateReview) {
+        this.dateReview = dateReview;
     }
 
-    public void setComment(String comment) {
-        this.comment = comment;
+    public Integer getReview() {
+        return maReview;
     }
 
-    public Date getDate() {
-        return date;
-    }
-
-    public void setDate(Date date) {
-        this.date = date;
+    public void setReview(Integer maReview) {
+        this.maReview = maReview;
     }
 }

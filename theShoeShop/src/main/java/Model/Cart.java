@@ -2,32 +2,32 @@ package Model;
 
 public class Cart {
 
-    private String accountId;
-    private String productId;
+    private Integer accountID;
+    private Integer productsID;
     private Integer quantity;
-    private Float subtotal;
+    private Integer maCart;
 
-    public Cart(String accountId, String productId, Integer quantity, Float subtotal) {
-        this.accountId = accountId;
-        this.productId = productId;
+    public Cart(Integer accountID, Integer productsID, Integer quantity, Integer maCart) {
+        this.accountID = accountID;
+        this.productsID = productsID;
         this.quantity = quantity;
-        this.subtotal = subtotal;
+        this.maCart = maCart;
     }
 
-    public String getAccountId() {
-        return accountId;
+    public Integer getAccountID() {
+        return accountID;
     }
 
-    public void setAccountId(String accountId) {
-        this.accountId = accountId;
+    public void setAccountID(Integer accountID) {
+        this.accountID = accountID;
     }
 
-    public String getProductId() {
-        return productId;
+    public Integer getProductID() {
+        return productsID;
     }
 
-    public void setProductId(String productId) {
-        this.productId = productId;
+    public void setProductID(Integer productsID) {
+        this.productsID = productsID;
     }
 
     public Integer getQuantity() {
@@ -38,11 +38,11 @@ public class Cart {
         this.quantity = quantity;
     }
 
-    public Float getSubtotal() {
-        return subtotal;
+    public Integer getCart() {
+        return maCart;
     }
 
-    public void setSubtotal(Float subtotal) {
-        this.subtotal = subtotal;
+    public void setCart(Integer maCart) {
+        this.maCart = maCart;
     }
 }

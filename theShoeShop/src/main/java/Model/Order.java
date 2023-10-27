@@ -1,63 +1,73 @@
 package Model;
 
-import java.sql.Date;
-
 public class Order {
-    private String id;
-    private String accountId;
-    private Date date;
-    private Float total;
-    private String status;
+    private Integer accountID;
+    private String companyName;
+    private String address;
+    private String city;
+    private String phone;
+    private Integer maOrder;
 
-    public Order(String id, String accountId, Date date, Float total, String status) {
-        this.id = id;
-        this.accountId = accountId;
-        this.date = date;
-        this.total = total;
-        this.status = status;
+    public Order(Integer accountID, String companyName, String address, String city, String phone, Integer maOrder) {
+        this.accountID = accountID;
+        this.companyName = companyName;
+        this.address = address;
+        this.city = city;
+        this.phone = phone;
+        this.maOrder = maOrder;
     }
 
     public Order() {
         
     }
 
-    public String getOrderId() {
-        return id;
+    public Integer getAccountID() {
+        return accountID;
     }
 
-    public void setOrderId(String id) {
-        this.id = id;
+    public void setAccountID(Integer accountID) {
+        this.accountID = accountID;
     }
 
-    public String getAccountId() {
-        return accountId;
+    public String getCompanyName() {
+        return companyName;
     }
 
-    public void setAccountId(String accountId) {
-        this.accountId = accountId;
+    public void setCompanyName(String companyName) {
+        this.companyName = companyName;
     }
 
-    public Date getDate() {
-        return date;
+    public String getAddress() {
+        return address;
     }
 
-    public void setDate(Date date) {
-        this.date = date;
+    public void setAddress(String address) {
+        this.address = address;
     }
 
-    public Float getTotal() {
-        return total;
+    public String getCity() {
+        return city;
     }
 
-    public void setTotal(Float total) {
-        this.total = total;
+    public void setCity(String city) {
+        this.city = city;
     }
 
-    public String getStatus() {
-        return status;
+    public String getPhone() {
+        return phone;
     }
 
-    public void setStatus(String status) {
-        this.status = status;
+    public void setPhone(String phone) {
+        this.phone = phone;
     }
+
+    public Integer getOrder() {
+        return maOrder;
+    }
+
+    public void setOrder(Integer maOrder) {
+        this.maOrder = maOrder;
+    }
+
+    
 }

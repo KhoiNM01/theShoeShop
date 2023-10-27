@@ -11,77 +11,68 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class OrderDAO {
-    private Connection connection;
+
+    private final Connection connection;
 
     public OrderDAO() throws SQLException {
         this.connection = DBContext.getConnection();
     }
 
-    public void addOrder(Order order) throws SQLException {
-        String query = "INSERT INTO orders (id, account_id, date, total, status) VALUES (?, ?, ?, ?, ?)";
-        try (PreparedStatement preparedStatement = connection.prepareStatement(query)) {
-            preparedStatement.setString(1, order.getOrderId());
-            preparedStatement.setString(2, order.getAccountId());
-            preparedStatement.setDate(3, new java.sql.Date(order.getDate().getTime()));
-            preparedStatement.setFloat(4, order.getTotal());
-            preparedStatement.setString(5, order.getStatus());
-            preparedStatement.executeUpdate();
-        }
-    }
-    
-    public Order getOrderById(String orderId) throws SQLException {
-        Order order = null;
-        String query = "SELECT * FROM orders WHERE id=?";
-        try (PreparedStatement preparedStatement = connection.prepareStatement(query)) {
-            preparedStatement.setString(1, orderId);
-            try (ResultSet resultSet = preparedStatement.executeQuery()) {
-                if (resultSet.next()) {
-                    order = new Order();
-                    order.setOrderId(resultSet.getString("id"));
-                    order.setAccountId(resultSet.getString("account_id"));
-                    order.setDate(resultSet.getDate("date"));
-                    order.setTotal(resultSet.getFloat("total"));
-                    order.setStatus(resultSet.getString("status"));
-                }
-            }
-        }
-        return order;
-    }
-
-    public List<Order> getAllOrders() throws SQLException {
+    // Method to retrieve all orders from the database for a specific account ID
+    public List<Order> getOrdersByAccountId(int accountId) throws SQLException {
         List<Order> orders = new ArrayList<>();
-        String query = "SELECT * FROM orders";
-        try (PreparedStatement preparedStatement = connection.prepareStatement(query);
-             ResultSet resultSet = preparedStatement.executeQuery()) {
-            while (resultSet.next()) {
-                Order order = new Order();
-                order.setOrderId(resultSet.getString("id"));
-                order.setAccountId(resultSet.getString("account_id"));
-                order.setDate(resultSet.getDate("date"));
-                order.setTotal(resultSet.getFloat("total"));
-                order.setStatus(resultSet.getString("status"));
-                orders.add(order);
+        String query = "SELECT * FROM Order WHERE accountId=?";
+        try ( PreparedStatement preparedStatement = connection.prepareStatement(query)) {
+            preparedStatement.setInt(1, accountId);
+            try ( ResultSet resultSet = preparedStatement.executeQuery()) {
+                while (resultSet.next()) {
+                    Order order = new Order();
+                    order.setAccountID(resultSet.getInt("accountID"));
+                    order.setCompanyName(resultSet.getString("companyName"));
+                    order.setAddress(resultSet.getString("address"));
+                    order.setCity(resultSet.getString("city"));
+                    order.setPhone(resultSet.getString("phone"));
+                    order.setOrder(resultSet.getInt("maOrder"));
+                    orders.add(order);
+                }
             }
         }
         return orders;
     }
 
-    public void updateOrder(Order order) throws SQLException {
-        String query = "UPDATE orders SET account_id=?, date=?, total=?, status=? WHERE id=?";
-        try (PreparedStatement preparedStatement = connection.prepareStatement(query)) {
-            preparedStatement.setString(1, order.getAccountId());
-            preparedStatement.setDate(2, new java.sql.Date(order.getDate().getTime()));
-            preparedStatement.setFloat(3, order.getTotal());
-            preparedStatement.setString(4, order.getStatus());
-            preparedStatement.setString(5, order.getOrderId());
+    // Method to add a new order to the database
+    public void addOrder(Order order) throws SQLException {
+        String query = "INSERT INTO Order (accountId, companyName, address, city, phone, maOrder) VALUES (?, ?, ?, ?, ?, ?)";
+        try ( PreparedStatement preparedStatement = connection.prepareStatement(query)) {
+            preparedStatement.setInt(1, order.getAccountID());
+            preparedStatement.setString(2, order.getCompanyName());
+            preparedStatement.setString(3, order.getAddress());
+            preparedStatement.setString(4, order.getCity());
+            preparedStatement.setString(5, order.getPhone());
+            preparedStatement.setInt(6, order.getOrder());
             preparedStatement.executeUpdate();
         }
     }
 
-    public void deleteOrder(String orderId) throws SQLException {
-        String query = "DELETE FROM orders WHERE id=?";
-        try (PreparedStatement preparedStatement = connection.prepareStatement(query)) {
-            preparedStatement.setString(1, orderId);
+    // Method to update an existing order in the database
+    public void updateOrder(Order order) throws SQLException {
+        String query = "UPDATE Order SET accountId=?, companyName=?, address=?, city=?, phone=?, maOrder=? WHERE orderId=?";
+        try ( PreparedStatement preparedStatement = connection.prepareStatement(query)) {
+            preparedStatement.setInt(1, order.getAccountID());
+            preparedStatement.setString(2, order.getCompanyName());
+            preparedStatement.setString(3, order.getAddress());
+            preparedStatement.setString(4, order.getCity());
+            preparedStatement.setString(5, order.getPhone());
+            preparedStatement.setInt(6, order.getOrder());
+            preparedStatement.executeUpdate();
+        }
+    }
+
+    // Method to delete an order from the database by order ID
+    public void deleteOrder(int orderId) throws SQLException {
+        String query = "DELETE FROM Order WHERE orderId=?";
+        try ( PreparedStatement preparedStatement = connection.prepareStatement(query)) {
+            preparedStatement.setInt(1, orderId);
             preparedStatement.executeUpdate();
         }
     }

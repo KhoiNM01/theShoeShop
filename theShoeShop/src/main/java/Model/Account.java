@@ -1,36 +1,40 @@
 package Model;
 
 public class Account {
-    private String id;
+    private int userId;
+    private String username;
     private String password;
-    private String name;
-    private String gender;
+    private String fullName;
+    private Boolean isAdmin;
     private String email;
-    private Integer phone;
-    private String address;
-    private String role;
 
-    public Account(String id, String password, String name, String gender, String email, Integer phone, String address, String role) {
-        this.id = id;
+    public Account(int userId, String username, String password, String fullName, boolean isAdmin, String email) {
+        this.userId = userId;
+        this.username = username;
         this.password = password;
-        this.name = name;
-        this.gender = gender;
+        this.fullName = fullName;
+        this.isAdmin = isAdmin;
         this.email = email;
-        this.phone = phone;
-        this.address = address;
-        this.role = role;
     }
 
     public Account() {
         
     }
 
-    public String getAccountId() {
-        return id;
+    public int getUserId() {
+        return userId;
     }
 
-    public void setAccountId(String id) {
-        this.id = id;
+    public void setUserId(int userId) {
+        this.userId = userId;
+    }
+
+    public String getUsername() {
+        return username;
+    }
+
+    public void setUsername(String username) {
+        this.username = username;
     }
 
     public String getPassword() {
@@ -41,28 +45,20 @@ public class Account {
         this.password = password;
     }
 
-    public String getName() {
-        return name;
+    public String getFullName() {
+        return fullName;
     }
 
-    public void setName(String name) {
-        this.name = name;
-    }
-    
-    public String getCustomerName() {
-        return name;
+    public void setFullName(String fullName) {
+        this.fullName = fullName;
     }
 
-    public void setCustomerName(String name) {
-        this.name = name;
+    public boolean isAdmin() {
+        return isAdmin;
     }
 
-    public String getGender() {
-        return gender;
-    }
-
-    public void setGender(String gender) {
-        this.gender = gender;
+    public void setAdmin(boolean isAdmin) {
+        this.isAdmin = isAdmin;
     }
 
     public String getEmail() {
@@ -72,28 +68,6 @@ public class Account {
     public void setEmail(String email) {
         this.email = email;
     }
-
-    public Integer getPhone() {
-        return phone;
-    }
-
-    public void setPhone(Integer phone) {
-        this.phone = phone;
-    }
-
-    public String getAddress() {
-        return address;
-    }
-
-    public void setAddress(String address) {
-        this.address = address;
-    }
-
-    public String getRole() {
-        return role;
-    }
-
-    public void setRole(String role) {
-        this.role = role;
-    }
+    
+    
 }

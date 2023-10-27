@@ -1,48 +1,54 @@
 package Model;
 
 public class Product {
-    private String id;
-    private String name;
-    private Double price;
+    private Integer id;
+    private String image;
+    private String title;
     private String description;
-    private Integer quantity;
-    private String supplyId;
+    private Integer cateID;
+    private Integer sell_ID;
+    private String image2;
+    private String image3;
+    private String image4;
 
-    public Product(String id, String name, Double price, String description, Integer quantity, String supplyId) {
+    public Product(Integer id, String image, String title, String description, Integer cateID, Integer sell_ID, String image2, String image3, String image4) {
         this.id = id;
-        this.name = name;
-        this.price = price;
+        this.image = image;
+        this.title = title;
         this.description = description;
-        this.quantity = quantity;
-        this.supplyId = supplyId;
+        this.cateID = cateID;
+        this.sell_ID = sell_ID;
+        this.image2 = image2;
+        this.image3 = image3;
+        this.image4 = image4;
     }
 
     public Product() {
         
     }
 
-    public String getProductId() {
+    public Integer getId() {
         return id;
     }
 
-    public void setProductId(String id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 
-    public String getProductName() {
-        return name;
+    public String getImage() {
+        return image;
     }
 
-    public void setProductName(String name) {
-        this.name = name;
+    public void setImage(String image) {
+        this.image = image;
     }
 
-    public Double getPrice() {
-        return price;
+    public String getTitle() {
+        return title;
     }
 
-    public void setPrice(Double price) {
-        this.price = price;
+    public void setTitle(String title) {
+        this.title = title;
     }
 
     public String getDescription() {
@@ -53,19 +59,43 @@ public class Product {
         this.description = description;
     }
 
-    public Integer getQuantity() {
-        return quantity;
+    public Integer getCategoryID() {
+        return cateID;
     }
 
-    public void setQuantity(Integer quantity) {
-        this.quantity = quantity;
+    public void setCategoryID(Integer cateID) {
+        this.cateID = cateID;
     }
 
-    public String getSupplyId() {
-        return supplyId;
+    public Integer getSell_ID() {
+        return sell_ID;
     }
 
-    public void setSupplyId(String supplyId) {
-        this.supplyId = supplyId;
+    public void setSell_ID(Integer sell_ID) {
+        this.sell_ID = sell_ID;
+    }
+
+    public String getImage2() {
+        return image2;
+    }
+
+    public void setImage2(String image2) {
+        this.image2 = image2;
+    }
+
+    public String getImage3() {
+        return image3;
+    }
+
+    public void setImage3(String image3) {
+        this.image3 = image3;
+    }
+
+    public String getImage4() {
+        return image4;
+    }
+
+    public void setImage4(String image4) {
+        this.image4 = image4;
     }
 }
