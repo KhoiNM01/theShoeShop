@@ -26,7 +26,7 @@ public class InventoryDAO {
             while (resultSet.next()) {
                 Inventory inventory = new Inventory();
                 inventory.setProductID(resultSet.getInt("productsID"));
-                inventory.setQuantitySold(resultSet.getInt("quantitySold"));
+                inventory.setSoldQuantity(resultSet.getInt("quantitySold"));
                 inventory.setInventory(resultSet.getInt("inventory"));
                 inventoryList.add(inventory);
             }
@@ -39,7 +39,7 @@ public class InventoryDAO {
         String query = "INSERT INTO Inventory (productsID, quantitySold, inventory) VALUES (?, ?, ?)";
         try (PreparedStatement preparedStatement = connection.prepareStatement(query)) {
             preparedStatement.setInt(1, inventoryItem.getProductID());
-            preparedStatement.setInt(2, inventoryItem.getQuantitySold());
+            preparedStatement.setInt(2, inventoryItem.getSoldQuantity());
             preparedStatement.setInt(3, inventoryItem.getInventory());
             preparedStatement.executeUpdate();
         }
@@ -49,7 +49,7 @@ public class InventoryDAO {
     public void updateInventoryItem(Inventory inventoryItem) throws SQLException {
         String query = "UPDATE Inventory SET quantitySold=?, inventory=? WHERE productsID=?";
         try (PreparedStatement preparedStatement = connection.prepareStatement(query)) {
-            preparedStatement.setInt(1, inventoryItem.getQuantitySold());
+            preparedStatement.setInt(1, inventoryItem.getSoldQuantity());
             preparedStatement.setInt(2, inventoryItem.getInventory());
             preparedStatement.setInt(3, inventoryItem.getProductID());
             preparedStatement.executeUpdate();

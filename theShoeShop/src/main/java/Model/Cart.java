@@ -2,47 +2,47 @@ package Model;
 
 public class Cart {
 
-    private Integer accountID;
-    private Integer productsID;
-    private Integer quantity;
-    private Integer maCart;
+    private int accountID;
+    private int productsID;
+    private int quantity;
+    private int maCart;
 
-    public Cart(Integer accountID, Integer productsID, Integer quantity, Integer maCart) {
+    public Cart(int accountID, int productsID, int quantity, int maCart) {
         this.accountID = accountID;
         this.productsID = productsID;
         this.quantity = quantity;
         this.maCart = maCart;
     }
 
-    public Integer getAccountID() {
+    public int getAccountID() {
         return accountID;
     }
 
-    public void setAccountID(Integer accountID) {
+    public void setAccountID(int accountID) {
         this.accountID = accountID;
     }
 
-    public Integer getProductID() {
+    public int getProductID() {
         return productsID;
     }
 
-    public void setProductID(Integer productsID) {
+    public void setProductID(int productsID) {
         this.productsID = productsID;
     }
 
-    public Integer getQuantity() {
+    public int getItemQuantity() {
         return quantity;
     }
 
-    public void setQuantity(Integer quantity) {
+    public void setItemQuantity(int quantity) {
         this.quantity = quantity;
     }
 
-    public Integer getCart() {
+    public int getCart() {
         return maCart;
     }
 
-    public void setCart(Integer maCart) {
+    public void setCart(int maCart) {
         this.maCart = maCart;
     }
 }

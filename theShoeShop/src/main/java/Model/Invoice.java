@@ -3,12 +3,12 @@ package Model;
 import java.sql.Date;
 
 public class Invoice {
-    private Integer maInvoice;
-    private Integer accountID;
-    private Float Total;
+    private int maInvoice;
+    private int accountID;
+    private float Total;
     private Date date;
 
-    public Invoice(Integer maInvoice, Integer accountID, Float Total, Date date) {
+    public Invoice(int maInvoice, int accountID, float Total, Date date) {
         this.maInvoice = maInvoice;
         this.accountID = accountID;
         this.Total = Total;
@@ -19,35 +19,35 @@ public class Invoice {
         
     }
 
-    public Integer getInvoice() {
+    public int getMaInvoice() {
         return maInvoice;
     }
 
-    public void setInvoice(Integer maInvoice) {
+    public void setMaInvoice(int maInvoice) {
         this.maInvoice = maInvoice;
     }
 
-    public Integer getAccountID() {
+    public int getAccountID() {
         return accountID;
     }
 
-    public void setAccountID(Integer accountID) {
+    public void setAccountID(int accountID) {
         this.accountID = accountID;
     }
 
-    public Float getTotal() {
+    public float getTotal() {
         return Total;
     }
 
-    public void setTotal(Float Total) {
+    public void setTotal(float Total) {
         this.Total = Total;
     }
 
-    public Date getDate() {
+    public Date getInvoiceDate() {
         return date;
     }
 
-    public void setDate(Date date) {
+    public void setInvoiceDate(Date date) {
         this.date = date;
     }
 }

@@ -24,10 +24,10 @@ public class InvoiceDAO {
              ResultSet resultSet = preparedStatement.executeQuery()) {
             while (resultSet.next()) {
                 Invoice invoice = new Invoice();
-                invoice.setInvoice(resultSet.getInt("maInvoice"));
+                invoice.setMaInvoice(resultSet.getInt("maInvoice"));
                 invoice.setAccountID(resultSet.getInt("accountID"));
                 invoice.setTotal(resultSet.getFloat("total"));
-                invoice.setDate(resultSet.getDate("date"));
+                invoice.setInvoiceDate(resultSet.getDate("date"));
                 invoices.add(invoice);
             }
         }
@@ -39,7 +39,7 @@ public class InvoiceDAO {
         try (PreparedStatement preparedStatement = connection.prepareStatement(query)) {
             preparedStatement.setInt(1, invoice.getAccountID());
             preparedStatement.setFloat(2, invoice.getTotal());
-            preparedStatement.setDate(3, new java.sql.Date(invoice.getDate().getTime()));
+            preparedStatement.setDate(3, new java.sql.Date(invoice.getInvoiceDate().getTime()));
             preparedStatement.executeUpdate();
         }
     }
@@ -49,8 +49,8 @@ public class InvoiceDAO {
         try (PreparedStatement preparedStatement = connection.prepareStatement(query)) {
             preparedStatement.setInt(1, invoice.getAccountID());
             preparedStatement.setFloat(2, invoice.getTotal());
-            preparedStatement.setDate(3, new java.sql.Date(invoice.getDate().getTime()));
-            preparedStatement.setInt(4, invoice.getInvoice());
+            preparedStatement.setDate(3, new java.sql.Date(invoice.getInvoiceDate().getTime()));
+            preparedStatement.setInt(4, invoice.getMaInvoice());
             preparedStatement.executeUpdate();
         }
     }

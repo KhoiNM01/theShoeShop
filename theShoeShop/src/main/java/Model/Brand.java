@@ -1,19 +1,19 @@
 package Model;
 
 public class Brand {
-    private Integer bid;
+    private int bid;
     private String bname;
 
-    public Brand(Integer bid, String bname) {
+    public Brand(int bid, String bname) {
         this.bid = bid;
         this.bname = bname;
     }
 
-    public Integer getBrandID() {
+    public int getBrandID() {
         return bid;
     }
 
-    public void setBrandID(Integer bid) {
+    public void setBrandID(int bid) {
         this.bid = bid;
     }
 

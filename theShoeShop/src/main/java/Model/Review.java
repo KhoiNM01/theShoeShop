@@ -3,13 +3,13 @@ package Model;
 import java.sql.Date;
 
 public class Review {
-    private Integer accountID;
-    private Integer productsID;
+    private int accountID;
+    private int productsID;
     private String contentReview;
     private Date dateReview;
-    private Integer maReview;
+    private int maReview;
 
-    public Review(Integer accountID, Integer productsID, String contentReview, Date dateReview, Integer maReview) {
+    public Review(int accountID, int productsID, String contentReview, Date dateReview, int maReview) {
         this.accountID = accountID;
         this.productsID = productsID;
         this.contentReview = contentReview;
@@ -21,43 +21,43 @@ public class Review {
         
     }
 
-    public Integer getAccountID() {
+    public int getAccountID() {
         return accountID;
     }
 
-    public void setAccountID(Integer accountID) {
+    public void setAccountID(int accountID) {
         this.accountID = accountID;
     }
 
-    public Integer getProductID() {
+    public int getProductID() {
         return productsID;
     }
 
-    public void setProductID(Integer productsID) {
+    public void setProductID(int productsID) {
         this.productsID = productsID;
     }
 
-    public String getContentReview() {
+    public String getReviewContent() {
         return contentReview;
     }
 
-    public void setContentReview(String contentReview) {
+    public void setReviewContent(String contentReview) {
         this.contentReview = contentReview;
     }
 
-    public Date getDateReview() {
+    public Date getReviewDate() {
         return dateReview;
     }
 
-    public void setDateReview(Date dateReview) {
+    public void setReviewDate(Date dateReview) {
         this.dateReview = dateReview;
     }
 
-    public Integer getReview() {
+    public int getMaReview() {
         return maReview;
     }
 
-    public void setReview(Integer maReview) {
+    public void setMaReview(int maReview) {
         this.maReview = maReview;
     }
 }

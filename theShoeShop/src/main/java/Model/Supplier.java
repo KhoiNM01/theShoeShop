@@ -1,14 +1,14 @@
 package Model;
 
 public class Supplier {
-    private Integer idSupplier;
+    private int idSupplier;
     private String nameSupplier;
     private String phoneSupplier;
     private String emailSupplier;
     private String addressSupplier;
-    private Integer cateID;
+    private int cateID;
 
-    public Supplier(Integer idSupplier, String nameSupplier, String phoneSupplier, String emailSupplier, String addressSupplier, Integer cateID) {
+    public Supplier(int idSupplier, String nameSupplier, String phoneSupplier, String emailSupplier, String addressSupplier, int cateID) {
         this.idSupplier = idSupplier;
         this.nameSupplier = nameSupplier;
         this.phoneSupplier = phoneSupplier;
@@ -21,11 +21,11 @@ public class Supplier {
         
     }
 
-    public Integer getSupplierID() {
+    public int getSupplierID() {
         return idSupplier;
     }
 
-    public void setSupplierID(Integer idSupplier) {
+    public void setSupplierID(int idSupplier) {
         this.idSupplier = idSupplier;
     }
 
@@ -61,11 +61,11 @@ public class Supplier {
         this.addressSupplier = addressSupplier;
     }
 
-    public Integer getCategoryID() {
+    public int getCategoryID() {
         return cateID;
     }
 
-    public void setCategoryID(Integer cateID) {
+    public void setCategoryID(int cateID) {
         this.cateID = cateID;
     }
 }

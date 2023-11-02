@@ -6,7 +6,7 @@ import java.sql.SQLException;
 
 public class DBContext {
 
-    private static final String JDBC_URL = "jdbc:sqlserver://localhost:8080;databaseName=TheShoeShop;";
+    private static final String JDBC_URL = "jdbc:sqlserver://localhost:1433;databaseName=TheShoeShop;";
     private static final String USERNAME = "admin";
     private static final String PASSWORD = "123456";
 

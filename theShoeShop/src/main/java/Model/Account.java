@@ -5,7 +5,7 @@ public class Account {
     private String username;
     private String password;
     private String fullName;
-    private Boolean isAdmin;
+    private boolean isAdmin;
     private String email;
 
     public Account(int userId, String username, String password, String fullName, boolean isAdmin, String email) {

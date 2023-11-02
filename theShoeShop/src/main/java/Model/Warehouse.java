@@ -3,17 +3,17 @@ package Model;
 import java.sql.Date;
 
 public class Warehouse {
-    private Integer productsID;
+    private int productsID;
     private String nameProduct;
     private Date importDate;
     private String nameSupplier;
     private String nameBrand;
-    private Integer quantity;
-    private Integer size;
+    private int quantity;
+    private int size;
     private String color;
-    private Float price;
+    private float price;
 
-    public Warehouse(Integer productsID, String nameProduct, Date importDate, String nameSupplier, String nameBrand, Integer quantity, Integer size, String color, Float price) {
+    public Warehouse(int productsID, String nameProduct, Date importDate, String nameSupplier, String nameBrand, int quantity, int size, String color, float price) {
         this.productsID = productsID;
         this.nameProduct = nameProduct;
         this.importDate = importDate;
@@ -29,11 +29,11 @@ public class Warehouse {
         
     }
     
-    public Integer getProductID() {
+    public int getProductID() {
         return productsID;
     }
 
-    public void setProductID(Integer productsID) {
+    public void setProductID(int productsID) {
         this.productsID = productsID;
     }
 
@@ -69,19 +69,19 @@ public class Warehouse {
         this.nameBrand = nameBrand;
     }
 
-    public Integer getQuantity() {
+    public int getQuantity() {
         return quantity;
     }
 
-    public void setQuantity(Integer quantity) {
+    public void setQuantity(int quantity) {
         this.quantity = quantity;
     }
 
-    public Integer getSize() {
+    public int getSize() {
         return size;
     }
 
-    public void setSize(Integer size) {
+    public void setSize(int size) {
         this.size = size;
     }
 
@@ -93,11 +93,11 @@ public class Warehouse {
         this.color = color;
     }
 
-    public Float getPrice() {
+    public float getPrice() {
         return price;
     }
 
-    public void setPrice(Float price) {
+    public void setPrice(float price) {
         this.price = price;
     }
 }

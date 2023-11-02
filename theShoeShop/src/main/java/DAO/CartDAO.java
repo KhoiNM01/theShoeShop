@@ -20,7 +20,7 @@ public class CartDAO {
         try (PreparedStatement preparedStatement = connection.prepareStatement(query)) {
             preparedStatement.setInt(1, cartItem.getAccountID());
             preparedStatement.setInt(2, cartItem.getProductID());
-            preparedStatement.setInt(3, cartItem.getQuantity());
+            preparedStatement.setInt(3, cartItem.getItemQuantity());
             preparedStatement.setInt(4, cartItem.getCart());
             preparedStatement.executeUpdate();
         }
@@ -30,7 +30,7 @@ public class CartDAO {
     public void updateCartItem(Cart cartItem) throws SQLException {
         String query = "UPDATE Cart SET quantity=? WHERE accountID=? AND productsID=?";
         try (PreparedStatement preparedStatement = connection.prepareStatement(query)) {
-            preparedStatement.setInt(1, cartItem.getQuantity());
+            preparedStatement.setInt(1, cartItem.getItemQuantity());
             preparedStatement.setInt(2, cartItem.getAccountID());
             preparedStatement.setInt(3, cartItem.getProductID());
             preparedStatement.executeUpdate();

@@ -1,14 +1,14 @@
 package Model;
 
 public class Order {
-    private Integer accountID;
+    private int accountID;
     private String companyName;
     private String address;
     private String city;
     private String phone;
-    private Integer maOrder;
+    private int maOrder;
 
-    public Order(Integer accountID, String companyName, String address, String city, String phone, Integer maOrder) {
+    public Order(int accountID, String companyName, String address, String city, String phone, int maOrder) {
         this.accountID = accountID;
         this.companyName = companyName;
         this.address = address;
@@ -21,11 +21,11 @@ public class Order {
         
     }
 
-    public Integer getAccountID() {
+    public int getAccountID() {
         return accountID;
     }
 
-    public void setAccountID(Integer accountID) {
+    public void setAccountID(int accountID) {
         this.accountID = accountID;
     }
 
@@ -61,11 +61,11 @@ public class Order {
         this.phone = phone;
     }
 
-    public Integer getOrder() {
+    public int getMaOrder() {
         return maOrder;
     }
 
-    public void setOrder(Integer maOrder) {
+    public void setMaOrder(int maOrder) {
         this.maOrder = maOrder;
     }
 

@@ -1,17 +1,17 @@
 package Model;
 
 public class Product {
-    private Integer id;
+    private int id;
     private String image;
     private String title;
     private String description;
-    private Integer cateID;
-    private Integer sell_ID;
+    private int cateID;
+    private int sell_ID;
     private String image2;
     private String image3;
     private String image4;
 
-    public Product(Integer id, String image, String title, String description, Integer cateID, Integer sell_ID, String image2, String image3, String image4) {
+    public Product(int id, String image, String title, String description, int cateID, int sell_ID, String image2, String image3, String image4) {
         this.id = id;
         this.image = image;
         this.title = title;
@@ -27,11 +27,12 @@ public class Product {
         
     }
 
-    public Integer getId() {
+
+    public int getProductID() {
         return id;
     }
 
-    public void setId(Integer id) {
+    public void setProductID(int id) {
         this.id = id;
     }
 
@@ -59,19 +60,19 @@ public class Product {
         this.description = description;
     }
 
-    public Integer getCategoryID() {
+    public int getCategoryID() {
         return cateID;
     }
 
-    public void setCategoryID(Integer cateID) {
+    public void setCategoryID(int cateID) {
         this.cateID = cateID;
     }
 
-    public Integer getSell_ID() {
+    public int getSellID() {
         return sell_ID;
     }
 
-    public void setSell_ID(Integer sell_ID) {
+    public void setSellID(int sell_ID) {
         this.sell_ID = sell_ID;
     }
 
